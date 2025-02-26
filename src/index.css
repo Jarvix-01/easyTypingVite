@@ -1,0 +1,176 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Alphabet{
+  font-size: 40px;
+  font-weight: bold;
+}
+.textInput{
+  width: 80%;
+  height: 40px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  font-size: 55px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.letter {
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.letter.selected {
+  color: red;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+.text-input {
+  border: 2px solid black;
+  padding: 10px;
+  width: 80vw;
+  text-align: center;
+  font-size: 40px;
+  max-width: 90%;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: lightgray;
+  transition: background 0.3s, transform 0.2s;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ===== Адаптивность для мобильных устройств ===== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .alphabet {
+    font-size: 18px;
+  }
+
+  .letter {
+    padding: 4px 8px;
+  }
+
+  .text-input {
+    font-size: 16px;
+    padding: 8px;
+    width: 200px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .alphabet {
+    font-size: 16px;
+  }
+
+  .letter {
+    padding: 3px 6px;
+  }
+
+  .text-input {
+    font-size: 14px;
+    padding: 6px;
+    width: 180px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+    min-width: 90px;
+  }
+}
+
